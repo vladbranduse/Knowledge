@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap');
+.perfil-container{
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.perfil-container .courses-navbar{
+    display: flex;
+    top: 0;
+    left: 0;
+    height: 8vh;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid  #808B96;
+    background-color: #2C3E50 ;
+}
+
+.perfil-container .courses-navbar .perfil-nav-bar{
+    margin-right: 30px;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    border: 1px solid white;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+}
+
+.perfil-container .mini-logo{
+    margin-left: 10px;
+    height: 45px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+
+.perfil-container .mini-logo h1{
+    display: inline-block;
+    font-family: 'Kenia', cursive;
+    font-size: 30px;
+    font-weight: 900;
+    color:#E67E22 ;
+    margin-left: 7.5px;
+}
+
+.perfil-container .courses-navbar .mini-logo .plus{
+    font-family: 'Kenia', cursive;
+    font-size: 65px;
+    color:black;
+}
+
+/*********************************************************/
+
+.perfil-body{
+    height: 92vh;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: row;
+}
+
+/*****************************************************/
+
+.perfil-body-left{
+    width:20%;
+    min-width: 350px;
+    max-height: 100%;
+    display: block;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #2C3E50;
+}
+
+.perfil-body-left .title-my-courses{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 30px;
+    margin-left: 20px;
+    margin-top: 15px;
+    color:#E67E22 ;
+}
+
+.perfil-body-left .course-subject{
+    margin-top: 30px;
+}
+
+.perfil-body-left .course-subject .course-name{
+    font-size: 16px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color:#F7F9F9 ;
+    margin-left: 20px;
+}
+
+
+.perfil-body-left .subjects-list{
+    min-width: 15em;
+    position: relative;
+    margin: 2em;
+}
+
+
+.perfil-body-left .subjects-list *{
+    box-sizing: border-box;
+}
+
+.perfil-body-left .subjects-list .select{
+    background-color: #2a2f3b;
+    color: #fff;
+    font-family: 'IBM Plex Sans', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px #2a2f3b solid;
+    border-radius: 0.5em;
+    padding: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/*javascript*/
+.select-clicked{
+    border: 2px #26489a solid;
+    box-shadow: 0 0 0.8em #26489a;
+}
+
+.perfil-container .perfil-body-left .subjects-list .select:hover{
+    background-color: #323741;
+}
+
+.caret{
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #fff;
+    transition: 0.3s;
+}
+
+/**javascript*/
+.caret-rotate{
+    transform: rotate(180deg);
+}
+
+.perfil-container .perfil-body-left .subjects-list .subjects{
+    list-style: none;
+    padding: 0.2em 0.5em;
+    background: #323741;
+    border: 1px #363a43 solid;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+    border-radius: 0.5em;
+    color: #9fa5b5;
+    position: absolute;
+    top: 3em;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    opacity: 0;
+    display: none;
+    transition: 0.5s ease-in-out;
+    z-index: 10;
+}
+
+.perfil-container .perfil-body-left .subjects-list .subjects li{
+    padding: 0.7em 0.5em;
+    margin: 0.3em 0;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.perfil-container .perfil-body-left .subjects-list .subjects li:hover{
+    background: #2a2d35;
+}
+
+/**javascript*/
+.perfil-container .perfil-body-left .subjects-list .active-subject{
+    background: #23242a;
+}
+
+/**javascript*/
+.perfil-container .perfil-body .perfil-body-left .subjects-list .menu-open{
+    display: block;
+    opacity: 1;
+}
+
+
+/************************FAVORITES******************/
+
+.perfil-container .perfil-body .perfil-body-left .favorites{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.perfil-container .perfil-body .perfil-body-left .favorites h1{
+
+    color: white;
+    font-family: 'IBM Plex Sans', sans-serif;
+    border: 2px #2a2f3b solid;
+    border-radius: 0.5em;
+    background-color: #2a2f3b;
+    width: 80%;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.perfil-container .perfil-body .perfil-body-left .favorites h1:hover{
+    background-color: #323741;
+}
+
+
+/********************RIGTH**********************/
+.perfil-container .perfil-body .perfil-body-rigth{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   background-color: #2C3E50;
+}
+
+.perfil-container .perfil-body-rigth .content-bar{
+    width: 50%;
+    height: 6%;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    background-color: #2C3E50;
+}
+
+.perfil-container .perfil-body-rigth .content-bar button{
+    padding: 10px;
+    width: 200px;
+    border: none;
+    border-radius: 2px;
+    background-color: #2C3E50;
+    font-size: 16px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color:#F7F9F9 ;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+
+}
+
+.perfil-body .perfil-body-rigth .content-bar .selected{
+    background-color: #566573;
+    transition: 0.3s ease;
+}
+
+/**************************PERFIL-BODY-RIGTH-CONTAINER*******************************/
+.perfil-container .perfil-body .perfil-body-rigth .perfil-body-rigth-container{
+    height: 94%;
+    width: 100%;
+
+}
+/**********************BOOKS*******************************/
+
+
+.book-container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    object-fit: cover;
+    object-position: center;
+    overflow-y: auto;
+}
+
+/*.books{*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    !*align-items: center;*!*/
+/*    flex-direction: column;*/
+/*    color: white;*/
+/*    border-radius: 10px;*/
+/*    width: 200px;*/
+/*    padding: 5px;*/
+/*    height: 150px;*/
+/*    font-family: "Source Sans Pro", sans-serif;*/
+/*    text-align: justify;*/
+/*    text-justify: inter-word;*/
+/*    margin: 10px;*/
+/*}*/
+/*.books img{*/
+/*    height: 100px;*/
+/*    border-radius: 10px;*/
+/*    width: 100px;*/
+/*    margin: 5px;*/
+/*    object-fit: cover;*/
+/*    object-position: center;*/
+/*}*/
+
+.perfil-body .perfil-body-rigth .books{
+    width: 98%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.perfil-body .perfil-body-rigth .books .books-card{
+    text-decoration: none;
+    object-fit: cover;
+    max-height: 270px;
+    min-height: 270px;
+    min-width: 170px;
+    max-width: 170px;
+    /*backgrou r: white;*/
+    border: 1px solid#E67E22 ;
+    border-radius: 10px;
+    transition: .3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color:black ;
+    cursor: pointer;
+
+}
+
+.perfil-body .perfil-body-rigth .books .books-card a{
+    height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100px;
+    color:#E67E22 ;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 16px;
+    z-index: 100;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+}
+.perfil-body .perfil-body-rigth .books .books-card a:hover{
+    color: black;
+}
+
+.perfil-body .perfil-body-rigth .books .books-card:hover{
+    /*background-color: #2C3E50;*/
+    /*color: white;*/
+}
+
+/*!**********************VIDEO*******************************!*/
+
+
+.perfil-body .perfil-body-rigth .perfil-body-rigth-container .video{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+/*!**************VIDEO LEFT******************************!*/
+.perfil-body .perfil-body-rigth .perfil-body-rigth-container .video .video-left{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2C3E50;
+}
+
+.perfil-body .perfil-body-rigth .perfil-body-rigth-container .video .video-left #player{
+    border-radius: 15px;
+}
+
+/*!***************VIDEO RGITH**************************!*/
+
+.perfil-body .perfil-body-rigth .perfil-body-rigth-container .video .video-rigth{
+    width: 30%;
+    height: 100%;
+    background-color: #2C3E50;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/*!***********************VIDEO CARD*************************!*/
+
+.perfil-body .perfil-body-rigth .perfil-body-rigth-container .video .video-rigth .video-card{
+    /*width: 300px;*/
+    /*height: 250px;*/
+    width: 300px;
+    min-height: 235px;
+    height: auto;
+    margin-top: 20px;
+    background-color: black;
+    border-radius: 5px;
+    object-fit: cover;
+    object-position: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.thumbnail-card{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+}
+
+.content-card{
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.channel-icon-card{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.title-card{
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    color: white;
+}
+
+.channel-name-card{
+    font-size: 14px;
+    margin: 2px 0;
+    color: white;
+}
+
+/***************************Courses Link******************************/
+
+.perfil-body .perfil-body-rigth .perfil-body-rigth-container .links{
+    width: 98%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: black;
+}
+
+.perfil-body .perfil-body-rigth .perfil-body-rigth-container .links .link-card{
+    width: 50%;
+    min-width: 50%;
+    height: 500px;
+    min-height: 500px;
+    background-color: white;
+}

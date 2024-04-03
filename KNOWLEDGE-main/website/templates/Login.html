@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <div class="container">
+        <div class="log-container1">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div id="message_box" class="alert alert-danger alter-dismissible fade show" role="alert">
+                            {{ message }}
+                            <button type="button" class="close close_message" data-dismiss="alert">
+                                <span id="close_message" aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <form action="#" method="POST">
+                <a class="logo" href="{{ url_for('views.home') }}">
+                    <h1>KNOWLEDGE</h1>
+                    <span class="plus">+</span>
+                </a>
+                <div class="login-title">
+                    <h1>Login</h1>
+                </div>
+                <input class="input-box" name="login-email" type="email" id="log_email" placeholder="Email" required>
+
+                <input class="input-box" name="login-pass" type="password" id="log_pass" placeholder="Password" required>
+
+                <a href="#" id="forgot-password" >Forgot Password</a>
+
+                <button id="logbtn_click" type="submit">Login</button>
+
+                <span id="bar"></span>
+
+{#                <button class="google-account">#}
+{#                    <span></span>#}
+{#                    <a href="#">Google Account</a>#}
+{#                </button>#}
+
+                <a href="{{ url_for('auth.sign_up') }}" id="btn-sign">Sign Up</a>
+            </form>
+        </div>
+
+        <div class="log-container2"></div>
+    </div>
+
+{% endblock %}

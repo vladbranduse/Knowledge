@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+    <div class="courses-container">
+        <div class="courses-navbar">
+            <a class="mini-logo">
+                <h1>KNOWLEDGE</h1>
+                <span class="plus">+</span>
+            </a>
+            <div class="perfil-nav-bar">{{ user.name[0] }}</div>
+        </div>
+
+        <!--------------------------------------------------------->
+
+        <div class="courses-body">
+            <div class="faculty-list">
+                <a id="back-faculties" href="{{ url_for('views.home') }}">
+                    <span class="faculty-icon courses-icon"></span>
+                    <h1>Faculties</h1>
+                </a>
+
+
+                <div id="bara"></div>
+
+
+                <a href="{{ url_for('views.render_courses', course_id='AD') }}">
+                    <span class="courses-icon" style="background-color: #2E64FE;">A</span>
+                    <h1>Art & Design</h1>
+                </a>
+                <a href="{{ url_for('views.render_courses', course_id='CBG') }}">
+                    <span class="courses-icon" style="background-color: #FFBF00;">C</span>
+                    <h1>Chemistry, Biology and Geography</h1>
+                </a>
+                <a href="{{ url_for('views.render_courses', course_id='LAW') }}">
+                    <span class="courses-icon" style="background-color: #FB2576">L</span>
+                    <h1>Law</h1>
+                </a>
+                <a href="{{ url_for('views.render_courses', course_id='EBA') }}">
+                    <span class="courses-icon" style="background-color: #2B3A55">E</span>
+                    <h1>Economics and Business Administration</h1>
+                </a>
+                <a href="{{ url_for('views.render_courses', course_id='SPORTS') }}">
+                    <span class="courses-icon" style="background-color: #863A6F">S</span>
+                    <h1>Sports</h1>
+                </a>
+                <a href="{{ url_for('views.render_courses', course_id='PH') }}">
+                    <span class="courses-icon" style="background-color: #54B435">PH</span>
+                    <h1>Physics</h1>
+                </a>
+                <a href="{{ url_for('views.render_courses', course_id='MI') }}">
+                    <span class="courses-icon" style="background-color:   #E26868">MI</span>
+                    <h1>Math and Informatics</h1>
+                </a>
+                <a href="{{ url_for('views.render_courses', course_id='MT') }}">
+                    <span class="courses-icon" style="background-color:#00ABB3">MT</span>
+                    <h1>Music and Theater</h1>
+                </a>
+                <a href="{{ url_for('views.render_courses', course_id='LHT') }}">
+                    <span class="courses-icon" style="background-color:  #FF6D28">L</span>
+                    <h1>Literature, History and Theology</h1>
+                </a>
+                <a href="{{ url_for('views.render_courses', course_id='SP') }}">
+                    <span class="courses-icon" style="background-color:  #B7C4CF">SP</span>
+                    <h1>Sociology and Psychology</h1>
+                </a>
+                <a href="{{ url_for('views.render_courses', course_id='PS') }}">
+                    <span class="courses-icon" style="background-color: #790252">PS</span>
+                    <h1>Political Science</h1>
+                </a>
+                <a href="{{ url_for('views.render_courses', course_id='PCS') }}">
+                    <span class="courses-icon" style="background-color: #224B0C">PC</span>
+                    <h1>Philosophy and Communication Sciences</h1>
+                </a>
+
+            </div>
+
+       <!----------------------------------------------------------->
+
+            <div class="courses-list">
+                {% for course in courses %}
+                    <a  href="{{ url_for('views.render_perfil', id=user.id, course_id=course.id) }}">
+                        {% if course.faculty == "AD" %}
+                            <div class="trio" style="background-color: #2E64FE">
+                                 <h1 class="course-name">{{ course.name }}</h1>
+                            </div>
+                            <h1 class="trio-jos">Start</h1>
+                        {% elif course.faculty == "CBG" %}
+                            <div class="trio" style="background-color: #FFBF00; color: #fff">
+                                 <h1 class="course-name">{{ course.name }}</h1>
+                            </div>
+                            <h1 href="" class="trio-jos">Start</h1>
+                        {% elif course.faculty == "LAW" %}
+                            <div class="trio" style="background-color: #FB2576; color:black">
+                                 <h1 class="course-name">{{ course.name }}</h1>
+                            </div>
+                            <h1 href="" class="trio-jos">Start</h1>
+                        {% elif course.faculty == "EBA" %}
+                            <div class="trio" style="background-color: #2B3A55; color: #fff">
+                                 <h1 class="course-name">{{ course.name }}</h1>
+                            </div>
+                            <h1 href="" class="trio-jos">Start</h1>
+                        {% elif course.faculty == "SPORTS" %}
+                            <div class="trio" style="background-color: #863A6F; color: #fff">
+                                 <h1 class="course-name">{{ course.name }}</h1>
+                            </div>
+                            <h1 href="" class="trio-jos">Start</h1>
+                        {% elif course.faculty == "PH" %}
+                            <div class="trio" style="background-color: #54B435; color: #fff">
+                                 <h1 class="course-name">{{ course.name }}</h1>
+                            </div>
+                            <h1 href="" class="trio-jos">Start</h1>
+                        {% elif course.faculty == "MI" %}
+                            <div class="trio" style="background-color: #E26868; color: black">
+                                 <h1 class="course-name">{{ course.name }}</h1>
+                            </div>
+                            <h1 href="" class="trio-jos">Start</h1>
+                        {% elif course.faculty == "MT" %}
+                            <div class="trio" style="background-color: #00ABB3; color: black">
+                                 <h1 class="course-name">{{ course.name }}</h1>
+                            </div>
+                            <h1 href="" class="trio-jos">Start</h1>
+                        {% elif course.faculty == "LHT" %}
+                            <div class="trio" style="background-color: #FF6D28; color: #fff">
+                                 <h1 class="course-name">{{ course.name }}</h1>
+                            </div>
+                            <h1 href="" class="trio-jos">Start</h1>
+                        {% elif course.faculty == "SP" %}
+                            <div class="trio" style="background-color:  #B7C4CF; color: black">
+                                 <h1 class="course-name">{{ course.name }}</h1>
+                            </div>
+                            <h1 href="" class="trio-jos">Start</h1>
+                        {% elif course.faculty == "PS" %}
+                            <div class="trio" style="background-color: #790252; color: #fff">
+                                 <h1 class="course-name">{{ course.name }}</h1>
+                            </div>
+                            <h1 href="" class="trio-jos">Start</h1>
+                        {% elif course.faculty == "PCS" %}
+                            <div class="trio" style="background-color:  #224B0C; color: #fff">
+                                 <h1 class="course-name">{{ course.name }}</h1>
+                            </div>
+                            <h1 class="trio-jos">Start</h1>
+                        {% endif %}
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!------------------>
+    <script src="https://unpkg.com/scrollreveal"></script>
+{% endblock %}

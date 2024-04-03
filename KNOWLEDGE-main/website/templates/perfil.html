@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <section class="perfil-container">
+        <div class="courses-navbar">
+            <a class="mini-logo">
+                <h1>KNOWLEDGE</h1>
+                <span class="plus">+</span>
+            </a>
+            <a href="" class="perfil-nav-bar">{{ user.name[0] }}</a>
+        </div>
+
+        <!-------------------------------------------------->
+
+        <section class="perfil-body">
+            <section class="perfil-body-left">
+                <h1 class="title-my-courses">My Courses</h1>
+                <div class="course-subject">
+                    <h1 class="course-name" >{{ courses.name }}</h1>
+                    <div class="subjects-list">
+                        <div class="select">
+                            <span id="d1_name" class="selected-subject" onload="loadBooksSearch(this.innerText)" >{{ disciplines[0].name }}</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="subjects" id="subjects">
+                            {% for d in disciplines %}
+                                <li id="{{ d.id }}" onclick="setBackground(this.innerText)">{{ d.name }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+
+                <h1 class="title-my-courses">Favorites</h1>
+                <div class="favorites" id="fav-book">
+                    <h1>Books</h1>
+                </div>
+                <div class="favorites" id="fav-video">
+                    <h1>Video</h1>
+                </div>
+                <div class="favorites" id="fav-link">
+                    <h1>Links</h1>
+                </div>
+            </section>
+<!------------------------------------------------------------->
+            <section class="perfil-body-rigth">
+
+                <div class="content-bar" id="content-bar">
+                    <button id="book-btn" class="resource selected">Books</button>
+                    <button id="video-btn" class="resource">Videos</button>
+                    <button id="course-btn" class="resource">Free Courses Online</button>
+                </div>
+
+                <div class="perfil-body-rigth-container" id="perfil-body-rigth-container">
+
+<!--                    <div class="books" id="books">-->
+<!--                        -->
+<!--                        <a href="#" class="books-card">-->
+<!--                            <h1>Title</h1>-->
+
+<!--                        </a>-->
+<!--                        <a href="#" class="books-card">-->
+<!--                            <h1>Title</h1>-->
+
+<!--                        </a>-->
+<!--                        <a href="#" class="books-card">-->
+<!--                            <h1>Title</h1>-->
+
+<!--                        </a>-->
+<!--                        <a href="#" class="books-card">-->
+<!--                            <h1>Title</h1>-->
+
+<!--                        </a>-->
+
+
+<!--                    </div>-->
+
+    <!------------------------------------------------------------>
+
+<!--                    <div class="video" id="video" >-->
+
+<!--                        <div class="video-left">-->
+<!--                            <div id="player"></div>-->
+<!--                        </div>-->
+
+<!--                        <div class="video-rigth">-->
+<!--                            <iframe class="video-card" src="https://www.youtube.com/embed/9-QavhHyfkk"></iframe>  &lt;!&ndash;frameborder="0" allow="accelermeter; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&ndash;&gt;-->
+
+<!--                            <iframe class="video-card" src="https://www.youtube.com/embed/9-QavhHyfkk" title="YouTube video player"></iframe>  &lt;!&ndash;frameborder="0" allow="accelermeter; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&ndash;&gt;-->
+
+<!--                            <iframe class="video-card" src="https://www.youtube.com/embed/9-QavhHyfkk" title="YouTube video player"></iframe>  &lt;!&ndash;frameborder="0" allow="accelermeter; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&ndash;&gt;-->
+
+<!--                            <iframe class="video-card" src="https://www.youtube.com/embed/9-QavhHyfkk"></iframe>  &lt;!&ndash;frameborder="0" allow="accelermeter; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&ndash;&gt;-->
+
+<!--                            <iframe class="video-card" src="https://www.youtube.com/embed/9-QavhHyfkk" title="YouTube video player"></iframe>  &lt;!&ndash;frameborder="0" allow="accelermeter; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&ndash;&gt;-->
+
+<!--                            <iframe class="video-card" src="https://www.youtube.com/embed/9-QavhHyfkk" title="YouTube video player"></iframe>  &lt;!&ndash;frameborder="0" allow="accelermeter; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&ndash;&gt;-->
+
+<!--                        </div>-->
+
+<!--                    </div>-->
+
+<!-------------------------------------------------------->
+
+<!--                    <div class="links" id="links">-->
+<!--                        <a href="#" class="links-card">-->
+<!--                            <iframe src="#" class="link-card"></iframe>-->
+<!--                        </a>-->
+                    </div>
+
+
+            </section>
+
+        </section>
+
+    </section>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+{% endblock %}

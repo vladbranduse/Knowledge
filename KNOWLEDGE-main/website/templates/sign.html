@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+
+        <div class="sign-container1">
+        </div>
+
+        <div class="sign-container2">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div id="message_box" class="alert alert-danger alter-dismissible fade show" role="alert">
+                            {{ message }}
+                            <button type="button" class="close close_message" data-dismiss="alert">
+                                <span id="close_message" aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <form action="#" method="post">
+                <a  href="{{ url_for('views.home') }}" class="logo" >
+                    <h1>KNOWLEDGE</h1>
+                    <span class="plus">+</span>
+                </a>
+                <div class="sign-title">
+                    <h1>Create an account</h1>
+                </div>
+
+                <input class="input-box" type="text" name="sign_username" id="sign_username" placeholder="Name" required>
+
+                <input class="input-box" type="email" name="sign_email" id="sign_email"  placeholder="Email" required>
+
+                <input class="input-box" type="password" name="sign_pass" id="sign_pass"  placeholder="Password" required>
+
+                <input class="input-box" type="password" name="sign_pass_confirm" id="sign_confirm-pass"  placeholder="Confirm Password" required>
+
+                <button id="signin_btn_click" type="submit">Sign Up</button>
+
+                <span id="bar"></span>
+
+                <a href="{{ url_for('auth.login') }}" id="btn-login">Login</a>
+            </form>
+        </div>
+
+    </div>
+{% endblock %}

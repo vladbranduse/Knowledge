@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <section class="section1" id="header">
+        <div class="navbar">
+                <a class="mini-logo">
+                    <h1>KNOWLEDGE</h1>
+                    <span class="plus">+</span>
+                </a>
+                <ul class="options" id="options">
+
+                    {% if user.is_authenticated %}
+                        <li><a href="#header" class="menu active">Home</a></li>
+
+                        <li><a href="#courses" class="menu ">Courses</a></li>
+
+                        <li><a href="#about" class="menu " >About</a></li>
+
+                        <li><a href="#" class="menu">Contact</a></li>
+                        <li >
+                            <a href="#" id="user-email">{{ user.email }}</a>
+                            <ul class="dropdown">
+                                <li><a href="{{ url_for('views.my_courses', id=user.id) }}">My Courses</a></li>
+<!--                                <li><a href="#">Account Settings</a></li>-->
+                                <li><a href="{{ url_for('auth.logout') }}">Log out</a></li>
+                            </ul>
+                        </li>
+                    {% else %}
+                        <li><a href="#header" class="menu active">Home</a></li>
+
+                        <li><a href="#courses" class="menu ">Courses</a></li>
+
+                        <li><a href="#about" class="menu " >About</a></li>
+
+                        <li><a href="#contact" class="menu ">Contact</a></li>
+
+                        <li><a href="{{ url_for('auth.login') }}">Login/Sign Up</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+
+        <div class="section1-center">
+                <h1 class="learn">Learn anything you want in</h1>
+                <a href="#courses" class="one">One Click!</a>
+        </div>
+
+    </section>
+
+    <section class="section2" id="courses">
+        <h1 class="sec-2-title">Find your <span>dream</span> graduation</h1>
+        <form class="container-courses">
+            <a href="{{ url_for('views.render_courses', course_id='AD') }}">Art & Design<span></span></a>
+            <a href="{{ url_for('views.render_courses', course_id='CBG') }}">Chemistry, Biology and Geography<span></span></a>
+            <a href="{{ url_for('views.render_courses', course_id='LAW') }}">Law<span></span></a>
+            <a href="{{ url_for('views.render_courses', course_id='EBA') }}">Economics and Business Administration<span></span></a>
+            <a href="{{ url_for('views.render_courses', course_id='SPORTS') }}">Sports<span></span></a>
+            <a href="{{ url_for('views.render_courses', course_id='PH') }}">Physics<span></span></a>
+            <a href="{{ url_for('views.render_courses', course_id='MI') }}">Math and Informatics<span></span></a>
+            <a href="{{ url_for('views.render_courses', course_id='MT') }}">Music and Theater<span></span></a>
+            <a href="{{ url_for('views.render_courses', course_id='AD') }}">Literature, History and Theology<span></span></a>
+            <a href="{{ url_for('views.render_courses', course_id='SP') }}">Sociology and Psychology<span></span></a>
+            <a href="{{ url_for('views.render_courses', course_id='PS') }}">Political Science<span></span></a>
+            <a href="{{ url_for('views.render_courses', course_id='PCS') }}">Philosophy and Communication Sciences<span></span></a>
+        </form>
+
+    </section>
+    <section class="section3" id="about">
+        <div class="section3-title">
+             <h1>About<span> Us</span></h1>
+        </div>
+
+        <div class="about-body">
+             <div class="about-left">
+                  <div class="image">
+                        <div class="first-image"></div>
+                  </div>
+                  <div class="text-box">
+                      <span>
+                          <h3>Our scope</h3>
+                          <p>Our main objective is to be able to make information reach our users faster, to change the idea that your dream education does not have to be acquired for a large sum of money, but by <a class="click">one click</a>.
+                          </p>
+                      </span>
+                  </div>
+            </div>
+
+            <div class="about-rigth">
+                <div class="text-box2">
+                    <span>
+                        <h3>What we have to ofer</h3>
+                        <p>On this platform you will find a wide <a class="click">variety of resources </a>within the area of study you choose that will bring your learning to another level.
+                        </p>
+                    </span>
+
+                </div>
+                <div class="image2">
+                        <div class="image-second"></div>
+                  </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section4" id="contact">
+        <div class="contact-card">
+            <div class="picture" id="img1"></div>
+            <h4 >Vlad Braduse</h4>
+            <p>Student(West University of Timisoara)</p>
+            <P>Resourses</P>
+            <p>vlad.branduse01@e-uvt.ro</p>
+        </div>
+        <div class="contact-card">
+            <div class="picture" id="img2"></div>
+            <h4 >Daniel Aguiar</h4>
+            <p>Student(West University of Timisoara)</p>
+            <P>Front-end</P>
+            <p>daniel.viana01@e-uvt.ro</p>
+        </div>
+        <div class="contact-card">
+            <div class="picture" id="img3"></div>
+            <h4 >Ivanilson Ramos</h4>
+            <p>Student(West University of Timisoara)</p>
+            <P>Back-end</P>
+            <p>ivanilson.ramos00@e-uvt.ro</p>
+        </div>
+
+
+    </section>
+    <script src="https://unpkg.com/scrollreveal"></script>
+{% endblock %}

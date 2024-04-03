@@ -1,0 +1,735 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;800&family=Kenia&family=Prompt:wght@900&family=Source+Code+Pro:wght@400;900&family=Source+Sans+Pro&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: black;
+}
+
+
+.section1{
+    background-image: url("img/sdt4.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: change 60s infinite ease-in-out;
+}
+@keyframes change {
+    0%{
+        background-image: url("img/sdt4.jpg");
+    }
+    20%{
+        background-image: url("img/std7.jpg");
+    }
+    40%{
+        background-image: url("img/std3.jpg");
+    }
+     60%{
+        background-image: url("img/std13.jpg");
+    }
+     80%{
+        background-image: url("img/std9.jpg");
+    }
+    100%{
+        background-image: url("img/std6.jpg");
+    }
+
+}
+
+
+.section1 .navbar {
+    background: rgba(0,0,0,0.3);
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    height: 70px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 11;
+    opacity: 0.7;
+}
+
+
+.section1 .navbar .mini-logo{
+    margin-left: 10px;
+    height: 45px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+
+.section1 .navbar .mini-logo h1{
+    display: inline-block;
+    font-family: 'Kenia', cursive;
+    font-size: 30px;
+    font-weight: 900;
+    color:#FDFEFE;
+    margin-left: 7.5px;
+}
+
+.section1 .navbar .mini-logo .plus{
+    font-family: 'Kenia', cursive;
+    font-size: 65px;
+    color:#E67E22 ;
+}
+/*****************************************/
+.section1 .navbar ul{
+    list-style: none;
+}
+.section1 .navbar ul li{
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin: 10px;
+    transition: all 0.3s ease 0s;
+}
+
+.section1 .navbar ul li a{
+    color: white;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.section1 .navbar ul li ul.dropdown li{
+    width: 100%;
+}
+
+
+.section1 .navbar ul li ul.dropdown li a{
+    height: 30px;
+    color: #17202A ;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    display: block;
+    list-style: none;
+    position: relative;
+    cursor: pointer;
+    align-items: center;
+}
+.section1 .navbar ul li .active{
+    color:#2874A6;
+    transition: 0.5s ease;
+}
+
+.options li:hover, .options li:focus, .options li:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.section1 .navbar ul li ul.dropdown li:hover{
+     background-color:#E5E7E9;
+}
+
+.section1 .navbar ul li ul.dropdown{
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    z-index: 15;
+    display: none;
+}
+
+.navbar ul li:hover ul.dropdown{
+    display: block;
+}
+
+/*******************************SECTION 1*******************************/
+
+.section1 .section1-center{
+    width: 90%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.section1 .section1-center .learn{
+    font-size: 100px;
+    color: white;
+    font-family: 'Prompt', sans-serif;
+    -webkit-text-fill-color: black;
+    -webkit-text-stroke-width:1px;
+    transition: 0.8s;
+}
+
+.section1 .section1-center .one{
+    font-size: 150px;
+    color: white;
+    font-family: 'Prompt', sans-serif;
+    -webkit-text-fill-color: #E67E22;
+    -webkit-text-stroke-width:1px;
+    text-decoration: none;
+    transition: 0.8s;
+}
+
+
+/**********************************SECTION 2*******************************************/
+
+.section2{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #FEF5E7 ;
+}
+
+.section2 h1{
+    margin-top: 20px;
+    font-size: 100px;
+    color: #E67E22;
+    font-family: 'Prompt', sans-serif;
+    transition: 0.8s;
+}
+
+.section2 h1 span{
+    font-size: 100px;
+    color: black;
+    font-family: 'Prompt', sans-serif;
+}
+
+.section2 .container-courses{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.section2 .container-courses a{
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 300px;
+    height: 160px;
+    margin: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    transition-duration: 0.3s;
+    position: relative;
+    z-index: 20;
+    font-size: 30px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 100;
+    color: white;
+    border: none;
+
+}
+.section2 .container-courses a:nth-child(1){
+    background-color: #2E64FE;
+}
+.section2 .container-courses a:nth-child(2){
+    background-color: #FFBF00;
+    color: #FFBF00;
+    /*border: 1px solid  #FFBF00;*/
+}
+.section2 .container-courses a:nth-child(3){
+    background-color: #FB2576;
+    color: #FB2576;
+    /*border: 1px solid  #FB2576;*/
+}
+.section2 .container-courses a:nth-child(4){
+    background-color: #2B3A55;
+    color: #2B3A55;
+    /*border: 1px solid  #2B3A55;*/
+}
+.section2 .container-courses a:nth-child(5){
+    background-color: #863A6F;
+     color: #863A6F;
+    /*border: 1px solid  #863A6F;*/
+}
+.section2 .container-courses a:nth-child(6){
+    background-color: #54B435;
+    color: #54B435;
+    /*border: 1px solid  #54B435;*/
+}
+.section2 .container-courses a:nth-child(7){
+    background-color: #E26868;
+    color: #E26868;
+    /*border: 1px solid  #E26868;*/
+}
+.section2 .container-courses a:nth-child(8){
+    background-color: #00ABB3;
+    color: #00ABB3;
+    /*border: 1px solid  #00ABB3;*/
+}
+.section2 .container-courses a:nth-child(9){
+    background-color: #FF6D28;
+     color: #FF6D28;
+    /*border: 1px solid  #FF6D28;*/
+}
+.section2 .container-courses a:nth-child(10){
+    background-color: #B7C4CF;
+    color: #B7C4CF;
+    /*border: 1px solid  #B7C4CF;*/
+}
+.section2 .container-courses a:nth-child(11){
+    background-color: #790252;
+    color: #790252;
+    /*border: 1px solid  #790252;*/
+}
+.section2 .container-courses a:nth-child(12){
+    background-color: #224B0C;
+    color: #224B0C;
+    /*border: 1px solid  #224B0C;*/
+}
+
+
+.section2 a span{
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 101;
+    transition: 0.5s ease-in-out;
+    border-radius: 10px 20px 20px 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.section2 .container-courses a:nth-child(1) span{
+    background-image: url("img/art.jpg");
+}
+.section2 .container-courses a:nth-child(2) span{
+    background-image: url("img/quim2.jpg");
+}
+.section2 .container-courses a:nth-child(3) span{
+    background-image: url("img/law.jpg");
+}
+.section2 .container-courses a:nth-child(4) span{
+    background-image: url("img/ecm.jpg");
+}
+.section2 .container-courses a:nth-child(5) span{
+    background-image: url("img/sport.jpg");
+}
+.section2 .container-courses a:nth-child(6) span{
+    background-image: url("img/phisic.jpg");
+}
+.section2 .container-courses a:nth-child(7) span{
+    background-image: url("img/math.jpg");
+}
+.section2 .container-courses a:nth-child(8) span{
+    background-image: url("img/music.jpg");
+}
+.section2 .container-courses a:nth-child(9) span{
+    background-image: url("img/theo.jpg");
+}
+.section2 .container-courses a:nth-child(10) span{
+    background-image: url("img/psyco.jpg");
+}
+.section2 .container-courses a:nth-child(11) span{
+    background-image: url("img/poli.jpg");
+}
+.section2 .container-courses a:nth-child(12) span{
+    background-image: url("https://axial.acs.org/wp-content/uploads/2016/11/sciencecom670.jpg");
+}
+
+
+
+.section2 .container-courses a:hover span{
+    width: 0;
+}
+
+.section2 .container-courses a:hover{
+    color: white;
+ }
+
+
+/*************************************************section3*************************/
+
+.section3{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-color: black;
+    display: block;
+}
+
+.section3  .section3-title{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    background-color: #FEF5E7 ;
+}
+
+.section3 .section3-title h1{
+    font-size: 100px;
+    color: #E67E22;
+    font-family: 'Prompt', sans-serif;
+    margin-right: 100px;
+    transition: 0.8s;
+}
+
+.section3 .section3-title h1 span{
+     color:black;
+}
+
+/***************************************/
+
+.section3 .about-body {
+    width: 100%;
+    min-height: 90%;
+    display: flex;
+    flex-direction: row;
+    transition: 0.8s;
+}
+
+/***********************************/
+
+.section3 .about-body .about-left{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: #FEF5E7 ;
+}
+.section3 .about-body  .image{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section3 .about-body .about-left  .image .first-image{
+    height:500px;
+    width: 500px;
+    background-image: url("img/about2.jpg");
+    background-size: cover;
+    background-position: center;
+    /*margin-left: 100px;*/
+    border-radius: 20px;
+    box-shadow: 0 0 10px;
+    transition: 0.8s;
+}
+
+.section3 .about-body .about-left .text-box{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.section3 .about-body .about-left .text-box span{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-bottom: 15px;
+    margin-left: 100px;
+}
+.section3 .about-body .about-left .text-box span h3{
+    color: #E67E22;
+    font-size: 30px;
+    font-family: 'Prompt', sans-serif;
+}
+
+.section3 .about-body .about-left .text-box span p{
+    width: 500px;
+    /*margin-left: 100px;*/
+    color: black;
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    transition: 0.8s;
+}
+
+.click{
+    color: #E67E22;
+    text-decoration: none;
+}
+
+/*************************************/
+.section3 .about-body .about-rigth{
+    border-top: 1px solid black;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+.section3 .about-body .about-rigth .text-box2 span{
+    /*margin-top: 50px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-top: 15px;
+    margin-left: 15px;
+    transition: 0.8s
+}
+
+.section3 .about-body .about-rigth .text-box2 span h3{
+    color: #E67E22;
+    font-size: 30px;
+    font-family: 'Prompt', sans-serif;
+    margin-left: 100px;
+}
+
+.section3 .about-body .about-rigth .text-box2 span p{
+    width: 500px;
+    color: white;
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-left: 100px;
+}
+.section3 .about-body .about-rigth .image2{
+    height: 50%;
+    width: 100%;
+    margin-top: 49px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section3 .about-body .about-rigth .image2 .image-second{
+    height:500px;
+    width: 500px;
+    min-height: 300px;
+    min-width: 300px ;
+    background-image: url("img/about1.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    border: 1px solid#FEF5E7 ;
+    box-shadow: 0 0 20px;
+    transition: 0.8s;
+}
+
+/***************************** SECTION 4 ***********************************/
+
+.section4{
+
+    height: 100vh;
+    min-height: 100vh;
+    width: 100%;
+    background-color: black ;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.section4 .contact-card{
+    height: 600px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    transition: 0.8s;
+}
+
+.section4 .contact-card .picture{
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid#FEF5E7 ;
+    transition: 0.8s;
+}
+.section4 .contact-card #img1{
+    background-image: url("img/vlad.jpeg");
+}
+
+.section4 .contact-card #img2{
+    background-image: url("img/daniel.jpeg");
+}
+
+.section4 .contact-card #img3{
+    background-image: url("img/iva.jpg");
+}
+
+.section4 .contact-card  h4, p{
+    color: #E67E22 ;
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    transition: 0.8s;
+}
+
+/******************MEDIA************************/
+
+
+@media screen and (max-width:1585px){
+     .section1 .section1-center .learn{
+        font-size: 70px;
+    }
+
+    .section1 .section1-center .one{
+        font-size: 120px;
+    }
+
+    /**********************************/
+    .section2 h1{
+        font-size: 70px;
+    }
+
+    .section2 h1 span{
+        font-size: 70px;
+    }
+
+    /***********************************/
+    .section3 .section3-title h1{
+        font-size: 70px;
+    }
+    .section3 .about-body .about-left  .image .first-image{
+        height: 400px;
+        width: 400px;
+    }
+    .section3 .about-body .about-rigth .image2 .image-second{
+        height: 400px;
+        width: 400px;
+    }
+
+    /*************************************/
+    .section4 .contact-card{
+        height: 400px;
+        width: 300px;
+    }
+    .section4 .contact-card .picture{
+        height: 200px;
+        width: 200px;
+    }
+
+    .section4 .contact-card  h4, p{
+        font-size: 14px;
+    }
+
+
+}
+
+@media screen and (max-width:1200px){
+
+    .section3 .about-body{
+        flex-direction: column;
+    }
+    /*************************************/
+    .section3 .about-body .about-left{
+        width: 100%;
+        height: 700px;
+    }
+
+    .section3 .about-body .about-rigth{
+        width: 100%;
+        height: 700px;
+    }
+    /**************************************/
+
+    .section3 .about-body .about-left .text-box{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section3 .about-body .about-left .text-box span{
+        margin-top: 0;
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .section3 .about-body .about-left .text-box span h3{
+        font-size: 25px;
+
+    }
+    .section3 .about-body .about-left .text-box span p{
+        font-size: 14px;
+        width: 350px;
+    }
+
+    .section3 .about-body .about-left  .image .first-image{
+        height: 350px;
+        width: 350px;
+    }
+    /********************************************/
+
+    .section3 .about-body .about-rigth .text-box2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .section3 .about-body .about-rigth .text-box2 span h3{
+        font-size: 25px;
+        margin-left: 20px;
+    }
+    .section3 .about-body .about-rigth .text-box2 span p{
+        font-size: 14px;
+        margin-left: 20px;
+        width: 350px;
+    }
+    .section3 .about-body .about-rigth .image2 .image-second{
+        height: 350px;
+        width: 350px;
+    }
+
+}
+
+
+@media screen and (max-width: 1146px){
+    .section1 .navbar ul li{
+        font-size: 10px;
+    }
+
+    /************************************/
+    .section1 .section1-center .learn{
+        font-size: 50px;
+    }
+
+    .section1 .section1-center .one{
+        font-size: 100px;
+    }
+    /***************************/
+    .section2 h1{
+        font-size: 50px;
+    }
+
+    .section2 h1 span{
+        font-size: 50px;
+    }
+    /*********************************/
+    .section3 .section3-title {
+        justify-content: center;
+    }
+
+    .section3 .section3-title h1{
+        margin-right: 0;
+    }
+
+    /***************************************/
+    .section4{
+        height: 150vh;
+         flex-direction: column;
+    }
+}

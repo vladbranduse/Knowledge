@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;800&family=Kenia&family=Prompt:wght@900&family=Source+Code+Pro:wght@400;900&family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap');
+
+
+.courses-container{
+    height: 100vh;
+    max-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.courses-container .courses-navbar{
+    display: flex;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid  #808B96;
+    background-color: #2C3E50 ;
+}
+
+.courses-container .courses-navbar .perfil-nav-bar{
+    margin-right: 30px;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    border: 1px solid white;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+}
+
+.courses-container .courses-navbar .mini-logo{
+    margin-left: 10px;
+    height: 45px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+
+.courses-container .courses-navbar .mini-logo h1{
+    display: inline-block;
+    font-family: 'Kenia', cursive;
+    font-size: 30px;
+    font-weight: 900;
+    color:#E67E22;
+    margin-left: 7.5px;
+}
+
+.courses-container .courses-navbar .mini-logo .plus{
+    font-family: 'Kenia', cursive;
+    font-size: 65px;
+    color: black;
+}
+
+/***********************************************************************/
+.courses-container .courses-body{
+    height: 92%;
+    display: flex;
+    flex-direction: row;
+}
+
+/***********************************************/
+
+.courses-container .courses-body .faculty-list{
+    width:20%;
+    min-width: 350px;
+    max-height: 100%;
+    display: block;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #2C3E50 ;
+}
+
+
+
+.courses-container .courses-body .faculty-list #bara{
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    margin: 20px 0 20px 0;
+}
+.courses-container .courses-body .faculty-list #bara2{
+    width: 100%;
+    height: 2px;
+    background-color: #808B96;
+    margin: 20px 0 20px 0;
+}
+
+.courses-container .courses-body .faculty-list a{
+    width: 90%;
+    padding: 5px;
+    height: 50px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    font-weight: 100;
+    border-radius: 0 50px 50px 0;
+    transition: 0.3s ease-in;
+}
+
+.courses-container .courses-body .faculty-list a:hover, .courses-container .courses-body .faculty-list a:focus, .courses-container .courses-body .faculty-list a:active{
+    background-color: #566573;
+}
+
+.courses-container .courses-body .faculty-list #back-faculties{
+    background-color: #566573 ;
+}
+
+
+.courses-container .courses-body .faculty-list .faculty-icon{
+    background-image: url("img/college.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: white;
+}
+
+
+.courses-container .courses-body .faculty-list  .courses-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: white;
+    font-weight: 100;
+    border: 1px solid white;
+}
+
+.courses-container .courses-body .faculty-list a h1{
+    width: 250px;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color:#F7F9F9 ;
+    font-size: 20px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin-right: 10px;
+}
+
+
+
+
+/****************************************Courses List********************************************/
+
+.courses-container .courses-body .courses-list{
+    width: 80%;
+    min-height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 20px;
+    /*background-color: #2C3E50 ;*/
+    background-color: white;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.courses-container .courses-body .courses-list a{
+    height: 270px;
+    min-width: 170px;
+    border-radius: 15px;
+    border: 1px solid #ABB2B9;
+    display: block;
+    justify-content: center;
+    padding: 5px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.courses-container .courses-body .courses-list a:hover{
+    box-shadow: 0 0 5px;
+}
+
+.courses-container .courses-body .courses-list .trio{
+    height: 170px;
+    width: 167px;
+    background-color: #FFBF00;
+    border-radius:  15px 5px 200px 5px;
+    margin-bottom: 28px;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.courses-container .courses-body .courses-list .trio .course-name{
+    z-index: 10;
+    font-size: 20px;
+    height: 100px;
+    text-decoration: none;
+    max-width: 90%;
+    color: black;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.courses-container .courses-body .courses-list .trio-jos{
+    height: 70px;
+    width: 70px;
+    background-color: #FFBF00;
+    margin-left: 100px;
+    border-radius:  200px 5px 25px 5px;
+    border-left: 5px solid #2B3A55 ;
+    border-bottom: 5px solid #2B3A55 ;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #54B435;
+    transition: 0.2s ease-in;
+}
+
+.courses-container .courses-body .courses-list .trio-jos:hover{
+    background-color: #F39C12 ;
+}
+
+/***********/
